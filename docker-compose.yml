@@ -1,0 +1,12 @@
+#database:
+#  image: wesleycharlesblake/postgres
+webapp:
+  build: .
+  command: python manage.py runserver 0.0.0.0:7878
+  volumes:
+    - app:/code/
+  ports:
+    - "7878:7878"
+#  links:
+#    - database
+
